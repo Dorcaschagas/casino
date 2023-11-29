@@ -1,4 +1,3 @@
 # casino
-
-https://dorcaschagas.github.io/casino/blob/main/src/html/index.html
+https://dorcaschagas.github.io/casino/src/html/index.html
  
