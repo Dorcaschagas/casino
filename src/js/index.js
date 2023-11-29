@@ -20,18 +20,24 @@ function updateScreenSize() {
     const screenHeight = $(window).height();
     const menuWidth = $('.menu').width();
 
-    if(screenWidth < 600){
-        $('#body').css('padding',' 100px 20px 0 80px');
+    if (screenWidth < 600) {
+        $('#body').css('padding', ' 100px 20px 0 80px');
         $('.pay').addClass('d-none');
         $('.iconHamb').addClass('d-none');
-        $('.navbar').css('padding',"0 85px")
-        $('.navbar').css( 'margin-left','2%')
+        $('.navbar').css('padding', "0 85px")
+        $('.navbar').css('margin-left', '2%')
     } else {
-        $('#body').css('padding','100px 60px 130px 130px')
+        $('#body').css('padding', '100px 60px 130px 130px')
         $('.pay').removeClass('d-none');
         $('.iconHamb').removeClass('d-none');
-        $('.navbar').css('padding',"0 65px")
-        $('.navbar').css( 'margin-left','60px')
+        $('.navbar').css('padding', "0 65px")
+        $('.navbar').css('margin-left', '60px')
+    }
+
+    if (menuWidth < 240) {
+        $(".list").addClass('listHover')
+    } else {
+        $(".list").removeClass('listHover')
     }
 
     if (screenHeight > 698 || menuWidth < 240) {
@@ -41,11 +47,11 @@ function updateScreenSize() {
     }
 }
 
-$(window).resize(function() {
+$(window).resize(function () {
     updateScreenSize();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     updateScreenSize();
 });
 
@@ -81,6 +87,7 @@ setInterval(nextSlide, intervalTime);
 var open = false;
 $(".iconHamb").click(function () {
     open = !open
+    openMenu()
     if (!open) {
         $(this).css('left', '12px')
         $(this).css('top', '10px')
@@ -88,7 +95,6 @@ $(".iconHamb").click(function () {
         $(this).css('left', '220px')
         $(this).css('top', '60px')
     }
-    openMenu()
 })
 
 function openMenu() {
@@ -99,12 +105,14 @@ function openMenu() {
         $(".navbar").css('margin-left', '240px');
         $(".conteinerTeste").css('margin-left', '240px');
         $(".listBox a").removeClass('d-none')
-        $(".listBox ").removeClass('listBoxHover')
         $(".nav").removeClass('d-none')
+        $(".list").removeClass('listHover')
+
+
     } else {
+        $(".list").addClass('listHover')
         $(".conteinerTeste").css('margin-left', '0');
         $(".iconHamb").html('❯')
-        $(".listBox").addClass('listBoxHover')
         $(".nav").addClass('d-none')
         $(".listBox a").addClass('d-none')
         $(".menu").css('width', '60px')
@@ -114,18 +122,23 @@ function openMenu() {
     }
 }
 
-$('.listBox li').hover(function () {
-    if (open) {
-        $(this).css({ 'background': 'white', 'color': 'black !important' });
-    } else {
-        $(this).find("a").removeClass('d-none');
-    }
-}, function () {
-    if (!open) {
-        $(this).find("a").addClass('d-none');
-    }
-    $(this).css('background', '');
+$(document).ready(function () {
+
+    $('.listBox li').hover(function () {
+        if (open) {
+            $(this).css('background', 'white !important'); 
+            $(this).css('color','black'); 
+        } else {
+            $(this).find("a").removeClass('d-none');
+        }
+    }, function () {
+        if (!open) {
+            $(this).find("a").addClass('d-none');
+        }
+        $(this).css('background', '');
+    });
 });
+
 
 
 
