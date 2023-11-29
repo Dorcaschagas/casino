@@ -15,8 +15,24 @@ document.onreadystatechange = function () {
 };
 
 function updateScreenSize() {
+
+    const screenWidth = $(window).width();
     const screenHeight = $(window).height();
     const menuWidth = $('.menu').width();
+
+    if(screenWidth < 600){
+        $('#body').css('padding',' 100px 20px 0 80px');
+        $('.pay').addClass('d-none');
+        $('.iconHamb').addClass('d-none');
+        $('.navbar').css('padding',"0 85px")
+        $('.navbar').css( 'margin-left','2%')
+    } else {
+        $('#body').css('padding','100px 60px 130px 130px')
+        $('.pay').removeClass('d-none');
+        $('.iconHamb').removeClass('d-none');
+        $('.navbar').css('padding',"0 65px")
+        $('.navbar').css( 'margin-left','60px')
+    }
 
     if (screenHeight > 698 || menuWidth < 240) {
         $(".listBoxDiv").css('overflow-y', 'visible');
@@ -32,10 +48,6 @@ $(window).resize(function() {
 $(document).ready(function() {
     updateScreenSize();
 });
-
-
-
-
 
 function showSlide(n) {
     slides.forEach(slide => {
@@ -104,9 +116,18 @@ function openMenu() {
 
 $('.listBox li').hover(function () {
     if (open) {
-        $(this).css({ 'background': 'white', 'color': 'black !importante' })
+        $(this).css({ 'background': 'white', 'color': 'black !important' });
+    } else {
+        $(this).find("a").removeClass('d-none');
     }
 }, function () {
+    if (!open) {
+        $(this).find("a").addClass('d-none');
+    }
     $(this).css('background', '');
 });
+
+
+
+
 

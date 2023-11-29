@@ -90,12 +90,14 @@
     background-color: #F5F5F5;
     width: 60px;
     padding: 0;
-    height: 100vh;
+    height: 100%;
 }
 
 .listBoxDiv {
     list-style: none;
     padding: 10px 0;
+    background-color: #F5F5F5;
+
     padding-left: 10px;
     max-width: 220px;
     max-height: 698px;
@@ -131,7 +133,22 @@
     margin: 60px 0;
 }
 
+a{
+    position: absolute;
+    top: -97px;
+    left: 50px;
+    white-space: nowrap;
+    width: 100%;
+    padding: 5px 50px !important;
+    background-color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:  0 10px 10px 0 ;
+}
+
 .listBox li {
+    position: relative;
     width: 100%;
 }
 
@@ -165,11 +182,11 @@ hr {
 #body {
     padding: 100px 60px 130px 130px;
     max-width: 1400px;
+    min-width: 600px;
+    min-width: 450px;
     margin: auto;
     width: 100%;
 }
-
-.boxMenu {}
 
 .slideshow {
     width: 100%;
