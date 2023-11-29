@@ -1,0 +1,244 @@
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    border: 1px solid;
+    margin: auto;
+}
+
+.imgLoad {
+    top: 25%;
+    background-image: url(../svg/ed261d95-6bec-4cf9-a6b0-8bd3d16f91a8.svg);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background-repeat: none;
+    background-repeat: none !important;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+#progressBar {
+    width: 25%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    border: 1px solid;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: black;
+}
+
+.iconHamb {
+    background-color: #0D0D0D;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 98%;
+    margin-left: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    gap: 8px;
+    box-shadow: -5px 0px 6px black;
+}
+
+.navbar img {
+    width: 33px;
+}
+
+.SingUp,
+.Login,
+.buyCripto {
+    font-weight: 800;
+    padding: 8px 13px;
+    box-shadow: 0 0 2px black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.SingUp {
+    background-color: black;
+    color: white;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F5F5F5;
+    width: 60px;
+    padding: 0;
+    height: 100vh;
+}
+
+.listBoxDiv {
+    list-style: none;
+    padding: 10px 0;
+    padding-left: 10px;
+    max-width: 220px;
+    max-height: 698px;
+    margin: 0;
+    /* overflow-y: scroll; */
+    scrollbar-width: thin;
+}
+
+.listBoxDiv::-webkit-scrollbar {
+    width: 10px;
+}
+
+.listBoxDiv::-webkit-scrollbar-track {
+    margin: 10px 0;
+    border-radius: 10px;
+    background: white !important;
+}
+
+.listBoxDiv::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: black;
+}
+
+.listBoxDiv::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+
+.listBox {
+    list-style: none;
+    padding: 0px 0;
+    width: 100%;
+    height: 100vh;
+    margin: 60px 0;
+}
+
+.listBox li {
+    width: 100%;
+}
+
+.listBox li img,
+.listBoxDiv div img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+hr {
+    color: black;
+    opacity: 1;
+    margin-right: 10px;
+}
+
+.listBoxDiv nav {
+    padding: 0;
+    height: 38px;
+    font-size: .9em;
+    font-weight: 400;
+}
+
+.list {
+    margin: 100px 0;
+    width: 100%;
+    text-decoration: none;
+    color: #0D0D0D;
+    padding: 0px 0;
+}
+
+#body {
+    padding: 100px 60px 130px 130px;
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+
+.boxMenu {}
+
+.slideshow {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.imageBox img {
+    max-height: 400px;
+    width: 100%;
+}
+
+.boxImageTwo div div img {
+    width: 100%;
+}
+
+.boxImageTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnOptionDiv {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    box-shadow: 0px 1px 5px black;
+}
+
+.btnOptionDiv:hover {
+    background-color: #E8E8E8;
+}
+
+.buyCripto:hover {
+    background-color: #C7C7C7;
+}
+
+.pay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3D3D3D;
+    color: white;
+    width: 100%;
+    height: 70px;
+}
+
+.pay div {
+    justify-content: center;
+    align-items: center;
+}
+
+.h2 {
+    word-wrap: nowrap !important;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+
+.listBoxHover li {
+    transition: filter 0.3s ease;
+    border-radius: 50%;
+}
+
+.listBoxHover li:hover {
+    filter: brightness(70%);
+}
+
+a:hover {
+    color: black;
+}
